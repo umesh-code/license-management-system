@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    var role = Context.Session.GetString("role");
+}
+
+<h2>Dashboard</h2>
+
+@if (role == "Admin")
+{
+    <h3 style="color:green;">Admin Dashboard</h3>
+}
+else
+{
+    <h3 style="color:blue;">User Dashboard</h3>
+}
+
+<hr />
+
+<!-- GET LICENSE -->
+<form method="get" action="/Dashboard/GetLicense">
+    <input type="text" name="tenantId" placeholder="Enter TenantId" required />
+    <button type="submit">Get License</button>
+</form>
+
+<br />
+
+<!-- GET DOCUMENT -->
+<form method="get" action="/Dashboard/GetDocument">
+    <input type="text" name="tenantId" placeholder="Enter TenantId" required />
+    <button type="submit">Get Document</button>
+</form>
+
+<br />
+
+<!-- SEND NOTIFICATION -->
+<form method="post" action="/Dashboard/SendNotification">
+    <input type="text" name="message" placeholder="Enter Message" required />
+    <button type="submit">Send Notification</button>
+</form>
+
+<hr />
+
+<h3>Response:</h3>
+
+@if (ViewBag.Data != null)
+{
+    var json = ViewBag.Data.ToString();
+
+    try
+    {
+        var arrayData = Newtonsoft.Json.Linq.JArray.Parse(json);
+
+        if (arrayData.Count > 0)
+        {
+            <table border="1" cellpadding="10">
+                <tr>
+                    @foreach (Newtonsoft.Json.Linq.JProperty prop in arrayData[0])
+                    {
+                        <th>@prop.Name</th>
+                    }
+                </tr>
+
+                @foreach (var item in arrayData)
+                {
+                    <tr>
+                        @foreach (Newtonsoft.Json.Linq.JProperty prop in item)
+                        {
+                            <td>@prop.Value</td>
+                        }
+                    </tr>
+                }
+            </table>
+        }
+    }
+    catch
+    {
+        var objData = Newtonsoft.Json.Linq.JObject.Parse(json);
+
+        <table border="1" cellpadding="10">
+            @foreach (Newtonsoft.Json.Linq.JProperty prop in objData.Properties())
+            {
+                <tr>
+                    <th>@prop.Name</th>
+                    <td>@prop.Value</td>
+                </tr>
+            }
+        </table>
+    }
+}

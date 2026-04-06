@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.37027.10 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseService", "LicenseService\LicenseService.csproj", "{61B3BF28-5AC5-485B-B10D-E88087761C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentService", "DocumentService\DocumentService.csproj", "{0D319504-B644-44EF-9A4C-CAA76E545812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "NotificationService\NotificationService.csproj", "{19535A0F-D43F-41A5-9C68-FC00E7F51B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{ACD1C96E-3609-479B-9B79-917F752DE8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseUI", "LicenseUI\LicenseUI.csproj", "{78E54040-724A-4972-BFBA-1789256DFC34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29A684B7-A33B-47F7-8ABF-927FAB286C81}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61B3BF28-5AC5-485B-B10D-E88087761C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B3BF28-5AC5-485B-B10D-E88087761C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B3BF28-5AC5-485B-B10D-E88087761C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B3BF28-5AC5-485B-B10D-E88087761C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D319504-B644-44EF-9A4C-CAA76E545812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D319504-B644-44EF-9A4C-CAA76E545812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D319504-B644-44EF-9A4C-CAA76E545812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D319504-B644-44EF-9A4C-CAA76E545812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19535A0F-D43F-41A5-9C68-FC00E7F51B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19535A0F-D43F-41A5-9C68-FC00E7F51B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19535A0F-D43F-41A5-9C68-FC00E7F51B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19535A0F-D43F-41A5-9C68-FC00E7F51B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD1C96E-3609-479B-9B79-917F752DE8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD1C96E-3609-479B-9B79-917F752DE8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD1C96E-3609-479B-9B79-917F752DE8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD1C96E-3609-479B-9B79-917F752DE8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E54040-724A-4972-BFBA-1789256DFC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E54040-724A-4972-BFBA-1789256DFC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E54040-724A-4972-BFBA-1789256DFC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E54040-724A-4972-BFBA-1789256DFC34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
